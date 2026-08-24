@@ -1,0 +1,21 @@
+{
+    "DESIGN_NAME": "anoc_network_5x5",
+    "VERILOG_FILES": [
+        "dir::rtl/anoc_network_5x5.sv",
+        "dir::rtl/anoc_node.sv",
+        "dir::rtl/anoc_packet.sv",
+        "dir::rtl/anoc_router.sv",
+        "dir::rtl/even_odd_router.sv",
+        "dir::rtl/fifo_bank_5port.sv",
+        "dir::rtl/priority_arbiter.sv",
+        "dir::rtl/priority_fifo.v"
+    ],
+    "CLOCK_PORT": "clk",
+    "CLOCK_PERIOD": 12.0,
+    "FP_CORE_UTIL": 40,
+    "FP_ASPECT_RATIO": 1.0,
+    "IO_PCT": 0.2,
+    "MAX_FANOUT_CONSTRAINT": 32,
+    "DESIGN_IS_CORE": false,
+    "BASE_SDC_FILE": "dir::anoc_base.sdc"
+}

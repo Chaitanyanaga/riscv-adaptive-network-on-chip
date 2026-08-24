@@ -1,0 +1,24 @@
+read_verilog -sv designs/anoc_rv/rtl/anoc_packet.sv
+read_verilog -sv designs/anoc_rv/rtl/anoc_router.sv
+read_verilog -sv designs/anoc_rv/rtl/even_odd_router.sv
+read_verilog -sv designs/anoc_rv/rtl/priority_arbiter.sv
+read_verilog -sv designs/anoc_rv/rtl/priority_fifo.v
+read_verilog -sv designs/anoc_rv/rtl/fifo_bank_5port.sv
+read_verilog -sv designs/anoc_rv/rtl/anoc_node.sv
+read_verilog -sv designs/anoc_rv/rtl/anoc_network_5x5.sv
+
+hierarchy -top anoc_network_5x5
+
+proc
+opt
+memory
+opt
+
+synth -top anoc_network_5x5
+
+opt_clean
+opt
+
+stat
+
+write_verilog -noattr designs/anoc_rv/results/yosys/anoc_network_5x5_gate.v

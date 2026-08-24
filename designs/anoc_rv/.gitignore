@@ -1,0 +1,6 @@
+runs/
+*.bak
+*.bak_*
+*.vcd
+results/physical_archive/
+results/yosys/yosys.log
